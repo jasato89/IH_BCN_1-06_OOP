@@ -1,5 +1,8 @@
 package com.ironhack;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Course {
 
     private int id;
@@ -8,14 +11,22 @@ public class Course {
     private String teacherName;
     private int studentCount;
     private final int MAX_CAPACITY = 20;
+    private static List<String> courses = new ArrayList<>();
 
     public Course(String courseName, String teacherName, int studentCount) {
         setId();
         setCourseName(courseName);
         setTeacherName(teacherName);
         setStudentCount(studentCount);
+        courses.add(courseName);
 
 
+    }
+    
+    public Course(String courseName) {
+        setId();
+        setCourseName(courseName);
+        setStudentCount(0);
     }
 
     private void setId() {
@@ -55,12 +66,9 @@ public class Course {
     public int getStudentCount() {
         return studentCount;
     }
-    
-    public static String[] getMostPopularCourses() {
-        return new String[]{"Java Bootcamp", 
-                "Cyber Bootcamp", 
-                "WebDev Bootcamp", 
-                "UI/UX Bootcamp"};
+
+    public static List<String> getMostPopularCourses() {
+        return courses;
     }
 
 }
