@@ -32,10 +32,10 @@ public class Main {
         for (Vehiculo v : vehiculo) {
             if(v instanceof Coche) {
                 System.out.println(((Coche) v).isCristalesTintados());
-                
-                
             }
         }
+
+        System.out.println(coche.toString());
         
  
 

@@ -26,4 +26,11 @@ public class Coche extends Vehiculo{
     public void setCristalesTintados(boolean cristalesTintados) {
         this.cristalesTintados = cristalesTintados;
     }
+
+    @Override
+    public void setBrand(String brand) {
+        super.setBrand(brand);
+    }
+l
+
 }
